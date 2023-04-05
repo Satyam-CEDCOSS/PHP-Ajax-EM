@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./CSS/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -8,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Manager</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Expense Manager</h1>
 
         <!-- Navigation Pannel  -->
         <nav>
-            <h5>Nav Pannel</h5>
+            <h5>Navigation Pannel</h5>
             <div class="nav__box">
                 <div class="nav__menu">
                     <button id="nav_salary">Salary</button>
@@ -31,59 +33,46 @@
                     <label for="">Enter Salary :
                         <input type="number" name="salary" id="salary_amount">
                     </label>
-                    <button id="enter_salary">Submit</button>
+                    <button id="enter_salary">Add</button>
+                    <button id="reset_salary">Reset</button>
+
                 </div>
             </div>
         </header>
 
         <!-- Section Expenses Pannel  -->
         <section>
-            <h5>Insert Expense</h5>
+            <h5>Expense Insertion</h5>
             <div class="section__box">
                 <div class="section__menu">
                     <select name="expence_list" id="dropdown">
                         <option value="">-Select-</option>
-                        <option value="0">Grocery</option>
-                        <option value="1">Veggies</option>
-                        <option value="2">Travelling</option>
-                        <option value="3">Miscellaneous</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Veggies">Veggies</option>
+                        <option value="Travelling">Travelling</option>
+                        <option value="Miscellaneous">Miscellaneous</option>
                     </select>
                     <input type="number" name="expense" id="expense_amount">
-                    <button id="enter_expense">Submit</button>
+                    <button id="enter_expense">Add</button>
+                    <button id="reset_expense">Reset</button>
+                    <button id="enter_update">Update</button>
                 </div>
             </div>
         </section>
 
-        <!-- Main Table Pannel  -->
-        <main>
-            <h5>Display Table</h5>
-            <div class="main__box">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Expense Type</th>
-                            <th>Total Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table_body"></tbody>
-                    <tfoot id="table_foot"></tfoot>
-                </table>
-            </div>
-        </main>
-
         <!-- Footer Savings Pannel  -->
         <footer>
-            <h5>Display Savings</h5>
+            <h5>Savings Data</h5>
             <div class="footer__box">
                 <div class="footer__table">
                     <table>
-                            <thead>
-                                <tr>
-                                    <th>Salary</th>
-                                    <th>Expenses</th>
-                                    <th>Savings</th>
-                                </tr>
-                            </thead>
+                        <thead>
+                            <tr>
+                                <th>Salary</th>
+                                <th>Expenses</th>
+                                <th>Savings</th>
+                            </tr>
+                        </thead>
                     </table>
                 </div>
                 <div class="footer__menu">
@@ -93,7 +82,27 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Main Table Pannel  -->
+        <main>
+            <h5>Expense Table</h5>
+            <div class="main__box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense Type</th>
+                            <th>Amount</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body"></tbody>
+                    <tfoot id="table_foot"></tfoot>
+                </table>
+            </div>
+        </main>
     </div>
 </body>
 <script src="./JS/script.js"></script>
+
 </html>
