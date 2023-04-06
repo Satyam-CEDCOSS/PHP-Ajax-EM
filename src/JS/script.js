@@ -25,6 +25,7 @@ function display(){
         color()
       });
 }
+display()
 $("section").hide() 
 $("#enter_update").hide() 
 
